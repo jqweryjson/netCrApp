@@ -1,0 +1,16 @@
+<footer class="footer">
+  <button class="footer__button footer__button_back">Back</button>
+  <ul class="infrastructure-list">
+    <li 
+      class="infrastructure-list-item"
+      *ngFor="let item of infrastructure">
+      <label class="infrastructure-list__label">
+          <input class="infrastructure-list__input" hidden type="radio">
+          <i></i>
+          <span [innerHtml]="item.text"></span>
+      </label>
+    </li>
+  </ul>
+  <button class="footer__button">Close</button>
+  <button class="footer__button footer__button_blue footer__button_next">Choose VNFCs</button>
+</footer>

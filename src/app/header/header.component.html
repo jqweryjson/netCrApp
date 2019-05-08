@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header__logo">
+    <i class="header__logo-icon"></i>
+    <span>Dimensioning <br>
+      and Planning Tool</span>
+  </div>
+  <ul class="header__list header__list_grow">
+    <li class="header__list-item"><a href="#">Projects</a></li>
+    <li class="header__list-item"><a href="#">NSs</a></li>
+    <li class="header__list-item"><a href="#">VNFs</a></li>
+    <li class="header__list-item"><a href="#">Servers</a></li> 
+    <li class="header__list-item"><a href="#">Network cards</a></li>
+  </ul>
+  <div class="header__toolbar">
+    <ul class="header__list">
+      <li *ngFor="let icon of icons; let i = index" class="header__list-item">
+        <a href="#">
+          <i 
+            class="header__toolbar-icon"
+            [ngStyle]="{ 'background-image': 'url(assets/' + icon + ')'}"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>

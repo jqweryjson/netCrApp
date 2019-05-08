@@ -1,0 +1,66 @@
+@import '../../mixins';
+.header {
+    background-color: #0c2336;
+    display:flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    padding: 0 1.875em;
+    &__logo {
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        @include fontSize(10px); 
+        @include lineHeight(12px);
+        font-weight: 700;
+        text-transform: uppercase;
+        /* Text style for "Dimensioni" */
+        letter-spacing: 0.25px;
+        &-icon{
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAYCAYAAACIhL/AAAAAbklEQVRYR2P8//9/AwN+4ENAnpD+NAL6t+CTZxx1IAPDaAiOpsHRTEKgGKE4k2wiYMEsAvJSFDoQbzkKKgdHHUhJTTQaggyEa5LRNDiaiwm1555RWA4aUaKfmPbgqAMpbSyMhuBoCBLIpcM7FwMAkPB7wSil9KEAAAAASUVORK5CYII=) 0 0 no-repeat;
+            display:block;
+            width:2.500em;
+            height: 2.500em;
+            padding: 0 10px;
+        }
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-item{
+            & a {
+                @include fontSize(12px); 
+                font-weight: 700;
+                @include lineHeight(30px);
+                text-transform: uppercase;
+                /* Text style for "Servers" */
+                letter-spacing: 0.3px;
+                text-decoration: none;
+                color: #ffffff;
+            }
+            &:not(:last-child){
+                margin-right: 1.563em;
+            }
+        }
+        &_grow {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    &__toolbar{
+        &-icon{
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display:block;
+            width: 23px;
+            height: 23px;
+        }
+    }
+}

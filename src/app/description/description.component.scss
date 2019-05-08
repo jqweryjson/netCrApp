@@ -1,0 +1,49 @@
+@import '../../mixins';
+
+.description {
+    box-shadow: 0 5px 10px rgba(51, 67, 90, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.875em;
+    &__manage {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    &__header {
+        color: #173147;
+        @include fontSize(20px); 
+        @include lineHeight(30px);
+        font-weight: 400;
+    }
+    &__edit {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAsElEQVQ4T53SwRGCMBAF0L9xRo5SiiVQgSMlUIaevHGkBC2BsQGlBDugBI9ezDobg4oGzJJjMi9/8ycExVpv98s7UzVLOK93xZVirUDLdAKQAmgNca7FZwCLZyA3f/HnqLghtWRqoSax2SgOjYo5WsGjb/6CvhpujmWRdT0Fk8OQLjKqJA7iWCgX9JI1sIe18IWnQIenQodXm4O053+N2/ppdegLC+b3YTzskj3WQcEPY0h7TjfTw5AAAAAASUVORK5CYII=) 0 0 no-repeat;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+        display: block;
+        cursor: pointer;
+    }
+    &__text {
+        flex: 0 1 100%;
+        font-weight: 400;
+        @include fontSize(12px); 
+        color: #5e767d;
+        &:before {
+            content:'';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #febf5c;
+            border-radius: 50%;
+            margin-right:3px;
+        }
+    }
+    &__add {
+        color: #5e767d;
+        @include fontSize(12px); 
+        font-weight: 400;
+    }
+}
