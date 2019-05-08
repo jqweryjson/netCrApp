@@ -1,5 +1,4 @@
 
-@import './app/header/header.component.scss';
 /* You can add global styles to this file, and also import other style files */
 
 * {
@@ -26,12 +25,12 @@ body {
 }
 #appWorkplace {
     flex: 1 0 auto;
-    overflow: hidden;
-    overflow-y: scroll;
     position: relative;
+    height: 0;
 }
 .content {
     flex: 1 0 auto;
     display: flex;
     flex-flow: column nowrap;
+    padding-top: 63px;
 }

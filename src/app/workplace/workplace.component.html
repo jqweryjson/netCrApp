@@ -3,5 +3,30 @@
     <span class="workplace__sections-item workplace__sections-item_active">DataC_1</span>
     <span class="workplace__sections-item">DataC_2</span>
   </div>
-  <div class="workplace__tasks">2</div>
+  <div class="workplace__tasks">
+      <div class="workplace__tool">
+        <input type="text" placeholder="Search" class="workplace__search">
+        <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch"></label>
+        </div>
+        <div class="workplace__switcher">Only selected</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>VNF Name</td>
+              <td>Vendor</td>
+              <td>Description</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of todos">
+              <td [innerHtml]="item.name"></td>
+              <td [innerHtml]="item.vendor"></td>
+              <td [innerHtml]="item.description"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
 </section>
