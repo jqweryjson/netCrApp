@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NetcrackerToDoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# netCrApp
+netCrApp
+>>>>>>> 9e1c9a2da96b643949bffa5c705623f123f6fc35
