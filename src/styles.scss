@@ -2,9 +2,36 @@
 @import './app/header/header.component.scss';
 /* You can add global styles to this file, and also import other style files */
 
-
-
+* {
+    box-sizing: border-box;
+}
+html,body {
+    position: relative;
+    height: 100%;
+}
 body {
     font-family: 'Noto Sans', sans-serif;
-    padding-top: 70px;
+}
+#appRoot {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#appFooter {
+    flex-shrink: 0;
+}
+#appDescription {
+    flex-shrink: 0;
+}
+#appWorkplace {
+    flex: 1 0 auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
 }

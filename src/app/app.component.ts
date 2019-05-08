@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { normalize } from 'normalize-path';
 
 @Component({
   selector: 'app-root',
