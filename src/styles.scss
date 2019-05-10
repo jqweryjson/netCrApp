@@ -10,12 +10,21 @@ html,body {
 }
 body {
     font-family: 'Noto Sans', sans-serif;
+
+}
+@keyframes awesomeInit {
+    100% {
+        transform: scale(1);
+    }
 }
 #appRoot {
     position: relative;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
+    will-change: transform;
+    transform: scale(.8);
+    animation: awesomeInit .2s .2s ease-in-out both;
 }
 #appFooter {
     flex-shrink: 0;

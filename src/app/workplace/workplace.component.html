@@ -7,16 +7,16 @@
       <div class="workplace__tool">
         <input type="text" placeholder="Search" [(ngModel)]="searchText" class="workplace__search">
         <div class="onoffswitch">
-            <input type="checkbox" [checked]="false" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <input type="checkbox" [(ngModel)]="onlySelected" [checked]="onlySelected" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
             <label class="onoffswitch-label" for="myonoffswitch"></label>
         </div>
-        <div class="workplace__switcher">Only selected</div>
+        <div class="workplace__switcher">Only selected <small> total:{{filterTodos.length}}</small></div>
         <table class="table">
           <thead>
             <tr>
-              <td width="10%">VNF Name</td>
+              <td width="15%">VNF Name</td>
               <td width="15%">Vendor</td>
-              <td width="75%">Description</td>
+              <td width="70%">Description</td>
             </tr>
           </thead>
           <tbody>
@@ -24,14 +24,14 @@
               <td colspan="3" class="table__td-inner">
                 <table class="table table__tr_border">
                   <tr>
-                    <td width="10%" class="table__name">
-                       <input type="checkbox" name="ch" id="{{item.id}}">
+                    <td width="15%" class="table__name">
+                       <input type="checkbox" [(ngModel)]="item.showversion" [checked]="item.showversion" name="ch" id="{{item.id}}">
                         <span [innerHtml]="item.name"></span> 
                     </td>
                     <td width="15%" [innerHtml]="item.vendor"></td>
-                    <td width="75%" class="table__description" [innerHtml]="item.description"></td>
+                    <td width="70%" class="table__description" [innerHtml]="item.description"></td>
                   </tr>
-                  <tr *ngIf="false">
+                  <tr *ngIf="item.showversion">
                     <td colspan="3">
                       <label *ngFor="let ver of item.version" class="table__label">
                         <input type="radio" name="version" id="">
@@ -41,9 +41,7 @@
                   </tr>
                 </table>
               </td>
-
             </tr>
-            
           </tbody>
         </table>
       </div>

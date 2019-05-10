@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 interface ItoDo {
   id:number,
+  showversion:boolean,
   version:string[],
   name:string,
   vendor:string,
@@ -14,20 +15,29 @@ interface ItoDo {
 })
 export class WorkplaceComponent implements OnInit {
   todos:ItoDo[];
+  onlySelected:boolean;
   searchText:string;
 
   constructor() { }
   get filterTodos():ItoDo[] {
-    if(this.searchText.trim().length === 0){
+    // if(this.onlySelected) 
+    if(this.searchText.trim().length === 0 && !this.onlySelected){
       return this.todos;
     }
-    return this.todos.filter( (item:ItoDo) => item.name.toLowerCase().includes(this.searchText.toLowerCase()) || item.description.toLowerCase().includes(this.searchText.toLowerCase()))
+    return this.todos.filter( 
+      (item:ItoDo) => (item.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
+                       item.description.toLowerCase().includes(this.searchText.toLowerCase())) &&
+                       item.showversion === this.onlySelected
+    )
   }
   ngOnInit() {
     this.searchText = '';
+    this.onlySelected = false;
+
     this.todos = [
       {
         id:0,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPrttg0',
         vendor:'NEC',
@@ -35,6 +45,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:1,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -42,6 +53,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:2,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -49,6 +61,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:3,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -56,6 +69,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:4,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -63,6 +77,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:5,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'EWVPCE40',
         vendor:'NEC',
@@ -70,6 +85,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:6,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -77,6 +93,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:7,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'UIYPCE40',
         vendor:'NEC',
@@ -84,6 +101,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:8,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'UR40',
         vendor:'NEC',
@@ -91,6 +109,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:10,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -98,6 +117,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:11,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -105,6 +125,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:12,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -112,6 +133,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:13,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
@@ -119,6 +141,7 @@ export class WorkplaceComponent implements OnInit {
       },
       {
         id:14,
+        showversion:false,
         version:['v1.001','v1.002','v1.003','v1.004','v1.005'],
         name:'RVPCE40',
         vendor:'NEC',
