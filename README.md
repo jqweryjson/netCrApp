@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+## Simple angular7 page https://jqweryjson.github.io/netCrApp/ 
 # NetcrackerToDoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # netCrApp
 netCrApp
->>>>>>> 9e1c9a2da96b643949bffa5c705623f123f6fc35
+
